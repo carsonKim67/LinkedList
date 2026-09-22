@@ -18,13 +18,33 @@ public class LinkedList{
 
   //instance varialbes go here (think about what you need to keep track of!)
 
+
   //constructors go here
+  ListNode head;
+
+  public LinkedList (){
+    head=null;
+  }
+
+
 
 
   //precondition: the list has been initialized
   //postcondition: the ListNode containing the appropriate value has been added and returned
   public ListNode addAValue(String line)
   {
+    int temp = head;
+    //create what you want to add
+    //head is null
+    //when toadd is smaller 
+    if(head==(null)){
+    while(temp.getNext()!=null){
+
+    if(line.compareTo(temp.getNext().getValue())<0){}
+
+    }
+  }
+    //otherwise travese to the right spot and add there instead
     return null;
   }
 
