@@ -33,17 +33,25 @@ public class LinkedList{
   //postcondition: the ListNode containing the appropriate value has been added and returned
   public ListNode addAValue(String line)
   {
-    int temp = head;
+    ListNode temp = head;
     //create what you want to add
     //head is null
-    //when toadd is smaller 
-    if(head==(null)){
-    while(temp.getNext()!=null){
-
-    if(line.compareTo(temp.getNext().getValue())<0){}
-
+    if(head==null   ){
+      head = new ListNode(line, head);
     }
-  }
+     //when toadd is smaller 
+     //find where to put it
+     //if it needs to go first line < head.getValue()
+     
+     //otherwise search for it
+    while(temp.getNext()!=null && line.compareTo(temp.getNext().getValue())>0){
+      temp = temp.getNext();
+    }
+
+    //found the right spot add a new node AFTER temp and make sure you don't lose the temp.getNext() node.
+
+
+  
     //otherwise travese to the right spot and add there instead
     return null;
   }
