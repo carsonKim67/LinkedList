@@ -64,6 +64,10 @@ public class LinkedList{
   //if the value is not in the list returns null
   public ListNode deleteAValue(String line)
   {
+    for(ListNode i=head; i!=null;i=i.getNext()){
+      if(i.getNext().getValue().compareTo(line)==0){
+        head.getNext()=head.getNext().getNext();
+      }
     return null;
   }
 
