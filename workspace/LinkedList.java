@@ -1,3 +1,5 @@
+//Carson Kim
+//This program creates and shows the values of a linked list.
 /*
 Problem:  Write a program that keeps and manipulates a linked list of
 	    String data. The data will be provided by the user one item at a time.
@@ -36,8 +38,9 @@ public class LinkedList{
     ListNode temp = head;
     //create what you want to add
     //head is null
-    if(head==null   ){
+    if(head==null || head.getValue().compareTo(line)>0){
       head = new ListNode(line, head);
+      return head;
     }
      //when toadd is smaller 
      //find where to put it
@@ -47,13 +50,13 @@ public class LinkedList{
     while(temp.getNext()!=null && line.compareTo(temp.getNext().getValue())>0){
       temp = temp.getNext();
     }
-
+    ListNode now = new ListNode(line,temp.getNext());
     //found the right spot add a new node AFTER temp and make sure you don't lose the temp.getNext() node.
-
+    temp.setNext(now);
 
   
     //otherwise travese to the right spot and add there instead
-    return null;
+    return now;
   }
 
   //precondition: the list has been initialized
@@ -68,8 +71,12 @@ public class LinkedList{
   //postconditions: returns a string containing all values appended together with spaces between.
   public String showValues()
   {
-    return null;
+    String a = "";
+    for(ListNode i=head; i!=null;i=i.getNext()){
+    a+=""+i.getValue();
   }
+  return a;
+}
 
   //precondition: the list has been initialized
   //postconditions: clears the list.
