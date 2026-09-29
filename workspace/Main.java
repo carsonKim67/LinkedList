@@ -35,7 +35,12 @@ public class Main{
               System.out.println("I don't know how to "+input);
           }
           input= reader.readLine();
+          else if(input.equals("reverse"))
+          {
+            list.reverse();
+          }
         }
+        
  
         // Printing the read line
         System.out.println("thanks for playing!");

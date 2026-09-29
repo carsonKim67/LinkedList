@@ -89,7 +89,7 @@ public class LinkedList{
   {
     String a = "";
     for(ListNode i=head; i!=null;i=i.getNext()){
-    a+=""+i.getValue();
+    a+= i.getValue();
   }
   return a;
 }
@@ -98,6 +98,24 @@ public class LinkedList{
   //postconditions: clears the list.
   public void clear()
   {
-    
+    head = null;
+    if(head==null){
+      System.out.println("cleared");
+    }
+  }
+
+  public String reverse(){
+    ListNode previous = null;
+    ListNode current = head;
+    ListNode next = null;
+
+    while(current !=null){
+      next=current.getNext();
+      current.setNext(previous);
+
+    }
+   
+    while()
+    return String; 
   }
 }
