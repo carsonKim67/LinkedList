@@ -104,7 +104,7 @@ public class LinkedList{
     }
   }
 
-  public String reverse(){
+  public ListNode reverse(){
     ListNode previous = null;
     ListNode current = head;
     ListNode next = null;
@@ -112,10 +112,10 @@ public class LinkedList{
     while(current !=null){
       next=current.getNext();
       current.setNext(previous);
-
+      previous=current;
+      current=next;
     }
-   
-    while()
-    return String; 
+    head=previous;
+    return head;
   }
 }
