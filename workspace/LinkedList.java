@@ -104,6 +104,9 @@ public class LinkedList{
     }
   }
 
+  //input - reverse is called
+  //output - listNodes will be reversed
+
   public ListNode reverse(){
     ListNode previous = null;
     ListNode current = head;
@@ -119,6 +122,8 @@ public class LinkedList{
     return head;
   }
 
+  //input - number type will be the size of the groups reversed
+  //output - listNodes will be reversed in groups of n
   public ListNode nReverse(int n){
     if(head==null||n<=1){
       return head;
