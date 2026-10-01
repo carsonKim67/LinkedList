@@ -34,6 +34,10 @@ public class Main{
           else if(input.equals("reverse")){
             list.reverse();
           }
+          else if(input.contains("reverse")&&(input.contains("0")||input.contains("1")||input.contains("2")||input.contains("3")||input.contains("4")||input.contains("5")||input.contains("6")||input.contains("7")||input.contains("8")||input.contains("9")||input.contains("0"))){
+            int n = Integer.parseInt(input.substring(0,1));
+            list.nReverse(n);
+          }
           else if(!input.equals("exit")){
               System.out.println("I don't know how to "+input);
           }

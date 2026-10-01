@@ -118,4 +118,39 @@ public class LinkedList{
     head=previous;
     return head;
   }
+
+  public ListNode nReverse(int n){
+    if(head==null||n<=1){
+      return head;
+    }
+    ListNode current = head;
+    ListNode nHead = null;
+    ListNode oTail = null;
+
+    while(current != null){
+      ListNode headGroup = current;
+      ListNode previous = null;
+      ListNode next = null;
+      int count =0;
+    
+
+    while(current != null &&count<n){
+      next=current.getNext();
+      current.setNext(previous);
+      previous = current;
+      current = next;
+      count++;
+    }
+    if(nHead ==null){
+      nHead=previous;
+    }
+    if(oTail!=null){
+      oTail.setNext(previous);
+    }
+    oTail=headGroup;
+  }
+  head=nHead;
+  return head;
+
+  }
 }
